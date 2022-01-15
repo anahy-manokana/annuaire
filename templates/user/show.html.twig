@@ -21,9 +21,12 @@
                         <h4>
                             Info  
                         </h4>
-                        <a href="{{ path('security_user_edit')}}" class=" btn btn-primary">
-                            <i class="far fa-edit"></i>
-                        </a>
+
+                        {% if  user.id == app.user.id %}
+                            <a href="{{ path('security_user_edit')}}" class=" btn btn-primary">
+                                <i class="far fa-edit"></i>
+                            </a>
+                        {% endif %}
                     </div>
                    
                 </div>
